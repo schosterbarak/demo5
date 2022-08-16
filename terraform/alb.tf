@@ -5,6 +5,10 @@ resource "aws_lb" "instance" {
     "subnet-24cdfd6f",
     "subnet-6a5e4813"
   ]
+  drop_invalid_header_fields = true
+  access_logs {
+    enabled = true
+  }
 }
 
 resource "aws_lb_listener" "instance" {
